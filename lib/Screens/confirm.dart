@@ -59,7 +59,7 @@ class _ConfirmScreenState extends State<ConfirmScreen>
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         SizedBox(
-                          height: 80 + (1 - animation.value) * 80,
+                          height: 100 + (1 - animation.value) * 80,
                         ),
                         Text(
                           "Booking Confirmed",
@@ -254,7 +254,7 @@ class _ConfirmScreenState extends State<ConfirmScreen>
                                 ),
                               ),
                               Positioned(
-                                bottom: -(1 - animation.value) * 100 + 70,
+                                bottom: -(1 - animation.value) * 100 + 20,
                                 left: 10,
                                 right: 10,
                                 child: Row(

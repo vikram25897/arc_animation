@@ -50,8 +50,8 @@ class _ChooseBHKState extends State<ChooseBhk> with SingleTickerProviderStateMix
         decoration: BoxDecoration(
 //                    color: Colors.red,
         color: Color.lerp(Colors.grey, Colors.white, animation.value),
-    borderRadius: BorderRadius.all(Radius.circular(
-    size.height*animation.value*1.5+150
+        borderRadius: BorderRadius.all(Radius.circular(
+        size.height*animation.value*1.5+150
 //                      size.height*animation.value < size.height ? size.height*animation.value : (1-animation.value)*size.width
     )))
     ),
@@ -63,6 +63,8 @@ class _ChooseBHKState extends State<ChooseBhk> with SingleTickerProviderStateMix
             right: 0,
             top: 20+(1-animation.value)*20,
             child: Container(
+              width: size.width,
+              height: size.height,
               padding: EdgeInsets.all(20.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -125,15 +127,19 @@ class _ChooseBHKState extends State<ChooseBhk> with SingleTickerProviderStateMix
                   ),
                   SizedBox(height: 20,),
                   CirclePicker(
-                    Colors.white,
-                    180+(1-animation.value)*90,
-                    width: 25*animation.value,
-                    space: 6*animation.value,
+                    count: 6,
+                    startAngle: 180+90*(1-animation.value),
+                    sweepAngle: 25*animation.value,
+                    dividerAngle: 6*animation.value,
+                    selectedColor: Colors.blue,
+                    unSelectedColor: Colors.grey,
                     onChange: (index){
                       print(index);
                     },
+                    width: size.width-40,
+                    height: 230,
                   ),
-                  SizedBox(height: 20,),
+                  SizedBox(height: 10,),
                   Padding(
                     padding: EdgeInsets.all(12),
                     child: Row(
@@ -164,7 +170,7 @@ class _ChooseBHKState extends State<ChooseBhk> with SingleTickerProviderStateMix
             ),
           ),
           Positioned(
-            bottom: -40 + 60*animation.value,
+            bottom: -40 + 40*animation.value,
             left: 0,
             right: 0,
             child: Padding(

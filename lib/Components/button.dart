@@ -16,7 +16,7 @@ Widget button({@required String text,@required Function onClick,
       child: InkWell(
         onTap: onClick,
         splashColor: Colors.white,
-        radius: 40,
+        radius: 20,
         borderRadius: BorderRadius.circular(40),
         customBorder: Border.all(
           color: borderColor,
@@ -29,7 +29,7 @@ Widget button({@required String text,@required Function onClick,
               text,
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 18,
+                fontSize: 14,
               ),
             ),
           ),

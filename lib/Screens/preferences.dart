@@ -40,7 +40,7 @@ class _PreferenceScreenState extends State<PreferenceScreen>
         body: Stack(
           children: <Widget>[
             Positioned(
-              top: size.height * (1 - animation.value) + 50,
+              top: size.height * (1 - animation.value) + 30,
               child: Padding(
                 padding: const EdgeInsets.all(12.0),
                 child: Column(
@@ -258,7 +258,7 @@ class _PreferenceScreenState extends State<PreferenceScreen>
               ),
             ),
             Positioned(
-                bottom: -40+animation.value*80,
+                bottom: -40+animation.value*60,
                 right: 20,
               child: InkWell(
                 onTap: (){
