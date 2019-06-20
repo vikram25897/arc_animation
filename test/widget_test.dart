@@ -4,7 +4,8 @@ import 'package:flutter_test/flutter_test.dart';
 void main(){
   testWidgets("Home screen has a my painter logo",(WidgetTester tester)async{
     await tester.pumpWidget(RouteHome());
-    final titleFinder = find.text('My Painter');
+    final titleFinder = find.text("My Painter");
+    print(titleFinder);
     expect(titleFinder, findsOneWidget);
   });
 }
