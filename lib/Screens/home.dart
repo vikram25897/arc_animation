@@ -122,7 +122,7 @@ class Home extends StatelessWidget{
                       children: <Widget>[
                         SizedBox(height: 20,),
                         CustomText.text18(
-                          text:"Interior Alone",
+                          text:"Interior",
                         ),
                         SizedBox(height: 40,),
                         customContainer(
