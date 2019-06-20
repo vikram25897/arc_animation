@@ -8,11 +8,11 @@ class Home extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
-    var remHeight = MediaQuery.of(context).size.height-240;
+    var remHeight = MediaQuery.of(context).size.height-180;
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,

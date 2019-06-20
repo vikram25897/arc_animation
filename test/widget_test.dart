@@ -1,9 +1,9 @@
-import 'package:animation/Screens/home.dart';
+import 'package:animation/Routes/routes.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main(){
   testWidgets("Home screen has a my painter logo",(WidgetTester tester)async{
-    tester.pumpWidget(Home());
+    await tester.pumpWidget(RouteHome());
     final titleFinder = find.text('My Painter');
     expect(titleFinder, findsOneWidget);
   });
