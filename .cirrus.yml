@@ -1,14 +1,12 @@
-container:
-  image: cirrusci/flutter:latest
 osx_instance:
   image: mojave-xcode-10.2
 build_task:
-  binaries_artifacts:
-    path: "build/*"
   build_script:
+    - wget https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_v1.9.1+hotfix.2-stable.zip
+    - unzip ~/Downloads/flutter_macos_v1.9.1+hotfix.2-stable.zip
+    - export PATH="$PATH:`pwd`/flutter/bin"
     - flutter packages get
     - cd ios && pod install
     - flutter build ios --no-codesign --release
-test_task:
-  pub_cache:
-    folder: ~/.pub-cache
+  binaries_artifacts:
+    path: "build/*"
