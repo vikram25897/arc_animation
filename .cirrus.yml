@@ -1,6 +1,12 @@
 container:
   image: cirrusci/flutter:latest
-
+build_task:
+  binaries_artifacts:
+    path: "build/*"
+  build_scripe:
+    - flutter packages get
+    - cd ios && pod install
+    - flutter build ios --no-codesign --release
 test_task:
   pub_cache:
     folder: ~/.pub-cache
