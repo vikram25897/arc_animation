@@ -3,7 +3,7 @@ osx_instance:
 build_task:
   build_script:
     - wget https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_v1.9.1+hotfix.2-stable.zip
-    - unzip ~/Downloads/flutter_macos_v1.9.1+hotfix.2-stable.zip
+    - unzip flutter_macos_v1.9.1+hotfix.2-stable.zip
     - export PATH="$PATH:`pwd`/flutter/bin"
     - flutter packages get
     - cd ios && pod install
