@@ -3,7 +3,7 @@ container:
 build_task:
   binaries_artifacts:
     path: "build/*"
-  build_scripe:
+  build_script:
     - flutter packages get
     - cd ios && pod install
     - flutter build ios --no-codesign --release
